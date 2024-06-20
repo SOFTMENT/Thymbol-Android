@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fafafa"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="none"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_alignParentStart="true"
+            android:layout_margin="20dp"
+            android:id="@+id/notification"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="3dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_notifications_none_24" />
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_alignParentEnd="true"
+            android:layout_margin="20dp"
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            app:cardCornerRadius="8dp"
+
+            app:cardElevation="3dp">
+
+            <TextView
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Category"
+                android:textSize="13sp"
+                android:fontFamily="@font/sfprobold2"
+                />
+
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:id="@+id/headll"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/main_color"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/splash" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="-24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headll"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toStartOf="@+id/searchBtn"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginStart="4dp"
+                android:elevation="3dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginBottom="3dp"
+                >
+
+                <EditText
+
+                    android:lines="1"
+                    android:id="@+id/searchEditText"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/sfproregular2"
+                    android:hint="@string/search_by_name_and_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edittext_back"
+
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/searchBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="3dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="3dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_search_24" />
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bestPlacesToVisit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headll"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/sfpromedium2"
+            android:maxLines="2"
+            android:text="Best Places To Visit In January"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+
+
+        <androidx.cardview.widget.CardView
+            android:visibility="gone"
+            android:id="@+id/bestPlaceCard"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_below="@+id/bestPlacesToVisit"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="@color/white"
+
+            >
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/shopImage"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/placeholder"
+                    app:riv_corner_radius="12dp" />
+
+                <TextView
+                    android:maxLines="2"
+                    android:id="@+id/shopName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toEndOf="@+id/shopImage"
+                    android:fontFamily="@font/sfprobold2"
+                    android:text="Ocean Breeze"
+                    android:textColor="@color/app_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shopAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shopName"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toEndOf="@+id/shopImage"
+                    android:fontFamily="@font/sfpromedium2"
+                    android:lineSpacingExtra="2dp"
+                    android:maxLines="2"
+                    android:text="233/9b saket nagar near sagar public school bhopal"
+                    android:textColor="@color/light_gray"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/shopImage"
+                    >
+                    <RelativeLayout
+                        android:layout_width="112dp"
+                        android:layout_height="match_parent"
+                        android:background="#BC2844"
+                        >
+
+                        <TextView
+                            android:id="@+id/topViewOutOf5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/sfprobold2"
+                            android:text="4.8"
+                            android:textColor="@color/white"
+                            android:textSize="24sp" />
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:background="@color/main_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_baseline_favorite_24"
+                                />
+                            <ImageView
+                                android:layout_marginStart="3dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_baseline_favorite_24"
+                                />
+                            <ImageView
+                                android:layout_marginStart="3dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_baseline_favorite_24"
+                                />
+                            <ImageView
+                                android:layout_marginStart="3dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_baseline_favorite_24"
+                                />
+                            <ImageView
+                                android:layout_marginStart="3dp"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_baseline_favorite_24"
+                                />
+
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/topViewTotalRatings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/sfproregular2"
+                            android:text="(512 Reviews)"
+                            android:layout_marginStart="20dp"
+                            android:textSize="11sp"
+                            android:layout_marginTop="2dp"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <ImageView
+            android:layout_marginTop="-3dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/bestPlacesToVisit"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="35dp"
+            android:src="@drawable/group509"
+            android:elevation="2dp"
+            />
+
+
+        <TextView
+            android:id="@+id/discoverResturantsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bestPlaceCard"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/sfprobold2"
+            android:maxLines="2"
+            android:text="@string/find_you_next_discount"
+            android:textColor="@color/app_black"
+            android:textSize="14sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/discoverResturantsLabel"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp"
+            android:scrollbars="none" />
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

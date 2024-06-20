@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:text="Food &amp; Drink"
+    android:textColor="@color/main_color"
+    android:fontFamily="@font/sfpromedium2"
+    android:textSize="13sp"
+    android:id="@+id/title"
+    />
+

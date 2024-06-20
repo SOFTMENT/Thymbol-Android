@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "637880097902",
+    "project_id": "thymbol-65858",
+    "storage_bucket": "thymbol-65858.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637880097902:android:b208f6e0a31071e71d5a7f",
+        "android_client_info": {
+          "package_name": "com.softment.thymbol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "637880097902-qu4lcggqpkvh0c6e3q4m5onulb1or84e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARfs179_QyyPVkjFpVgGydOdqJPdyIXOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "637880097902-qu4lcggqpkvh0c6e3q4m5onulb1or84e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "637880097902-2dhtj865gr4s0gq9tb2ui52b2oskg708.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "in.softment.thymbol",
+                "app_store_id": "6445877594"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ReviewActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:id="@+id/back"
+            />
+        <TextView
+            android:id="@+id/storeName"
+            android:textColor="#444444"
+            android:textSize="15sp"
+            android:fontFamily="@font/sfpromedium2"
+            android:layout_toEndOf="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:text="How to prepare and deliver a TED Talk"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#8D434343"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        >
+    <com.makeramen.roundedimageview.RoundedImageView
+
+        app:riv_corner_radius="22dp"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@drawable/profile_placeholder"
+        android:id="@+id/profile"
+        android:scaleType="centerCrop"
+        />
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/profile"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:fontFamily="@font/sfpromedium2"
+            android:textColor="@color/black"
+            android:id="@+id/fullName"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Posted Publicly"
+            android:textSize="12sp"
+            android:fontFamily="@font/sfpromedium2"
+            android:textColor="@color/light_gray"
+            />
+    </LinearLayout>
+
+    </RelativeLayout>
+
+    <RatingBar
+        android:layout_gravity="center_horizontal"
+        android:progressTint="#FFCD3C"
+        android:id="@+id/ratingBar"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:rating="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/totalRatings"
+        android:layout_alignTop="@id/totalRatings"
+        />
+    
+    <LinearLayout
+        android:id="@+id/uploadVideoBtn"
+        android:background="@drawable/videoreview_back"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_marginStart="10dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_videocam_24"
+            />
+        <TextView
+            android:id="@+id/uploadVideoText"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Video"
+            android:textSize="13sp"
+            android:fontFamily="@font/sfpromedium2"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+
+            />
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/postBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/password"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edittext_back"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/sfpromedium2"
+        android:text="Post"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+</LinearLayout>

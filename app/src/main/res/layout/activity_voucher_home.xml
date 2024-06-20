@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="#fafafa"
+    tools:context=".VoucherHomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/back"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="3dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_new_24" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/more"
+                android:layout_toEndOf="@+id/back"
+                android:fontFamily="@font/sfprosemibold2"
+                android:text="@string/notifications"
+                android:textColor="@color/app_black"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_baseline_more_vert_24" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+
+        >
+        <com.makeramen.roundedimageview.RoundedImageView
+            app:riv_corner_radius="8dp"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/placeholder"
+            android:id="@+id/businessImage"
+            android:scaleType="centerCrop"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:id="@+id/businessName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/sfpromedium2"
+                android:text="MCDONALD"
+                android:textColor="#4B4B4B"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/businessCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfpromedium2"
+                android:textSize="12sp"
+                android:layout_marginTop="1dp"
+                android:text="Food &amp; Drink"
+                android:textColor="@color/gray"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+                    <TextView
+
+                        android:id="@+id/videoReview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/video_review"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="#007AFF"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/sfpromedium2"
+                        />
+                </RelativeLayout>
+        <TextView
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprobold2"
+            android:textSize="15sp"
+            android:text="@string/thank_you_for_being_our_customer"
+            android:textColor="@color/app_black"
+            android:layout_marginBottom="1dp"
+            />
+        <TextView
+            android:id="@+id/offerTitle"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprobold2"
+            android:textSize="15sp"
+            android:text="Get 20% OFF"
+            android:textColor="@color/app_black"
+            android:layout_marginBottom="1dp"
+            />
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/calendar"
+                />
+            <TextView
+                android:id="@+id/validity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textColor="#262c3d"
+                android:fontFamily="@font/sfpromedium2"
+                android:textSize="13sp"
+                android:text="Valid until 31 March 2022"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/marker"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+            <TextView
+                android:id="@+id/addressName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textColor="#262c3d"
+                android:fontFamily="@font/sfpromedium2"
+                android:textSize="13sp"
+                android:text="AIIMS HOSPITAL"
+                />
+                <TextView
+                    android:id="@+id/fullAddress"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textColor="#747F9E"
+                    android:fontFamily="@font/sfpromedium2"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="2dp"
+                    android:text="Near saket nagar, hoshangabad road, Bhopal, 462024, india"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprobold2"
+            android:textSize="14sp"
+            android:text="@string/conditions"
+            android:textColor="@color/app_black"
+            android:layout_marginBottom="1dp"
+            />
+
+        <TextView
+            android:id="@+id/voucherConditions"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="#747F9E"
+            android:fontFamily="@font/sfpromedium2"
+            android:textSize="13sp"
+            android:text="Flipkart india ka fashion capital, is your one-stop fashion destination for anything and everything you need to look good"
+            android:lineSpacingExtra="2dp"
+            />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprobold2"
+            android:textSize="15sp"
+            android:text="@string/location"
+            android:textColor="@color/app_black"
+            android:layout_marginBottom="1dp"
+            />
+        <fragment
+
+            android:layout_marginTop="20dp"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/ratingsAndReviewMainView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="72dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sfprobold2"
+                        android:textSize="15sp"
+                        android:text="Ratings and reviews"
+                        android:textColor="@color/app_black"
+                        android:id="@+id/ratingsAndReviewHeading"
+                        />
+                    <TextView
+                        android:layout_marginTop="16dp"
+                        android:layout_below="@+id/ratingsAndReviewHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sfprobold2"
+                        android:textSize="28sp"
+                        android:text="4.5"
+                        android:textColor="@color/app_black"
+                        android:id="@+id/totalRatings"
+                        />
+                    <RatingBar
+                        android:progressTint="#FFCD3C"
+                        android:id="@+id/ratingBar"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="10dp"
+                        android:rating="4.6"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_toEndOf="@+id/totalRatings"
+                        android:layout_alignTop="@id/totalRatings"
+                        />
+
+                    <TextView
+                        android:id="@+id/basedOnTotalReview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ratingBar"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/totalRatings"
+                        android:fontFamily="@font/sfproregular2"
+                        android:text="Based on 120 ratings"
+                        android:textColor="@color/light_gray"
+                        android:textSize="12sp" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:nestedScrollingEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/totalRatings"
+                        android:layout_marginTop="20dp"
+                        android:scrollbars="none"
+                        android:id="@+id/recyclerview"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:background="#CFCFCF"
+        android:layout_above="@+id/bottomLL"
+        />
+
+    <LinearLayout
+
+        android:id="@+id/bottomLL"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:maxWidth="134dp"
+                android:id="@+id/voucherOffBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprosemibold2"
+                android:lines="1"
+                android:text="20% OFF"
+                android:textColor="#262c3d"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprosemibold2"
+                android:text="On Thymbol"
+                android:textColor="#747F9E"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/redeemVoucherBtn"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/btn_back"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/sfpromedium2"
+            android:text="@string/redeem_coupon_code"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</RelativeLayout>
